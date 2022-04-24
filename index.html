@@ -322,25 +322,25 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input name="Name" class="form-control" id="name" type="text" placeholder="Your Name *" required/>
+                                <input name="data[Name]" class="form-control" id="name" type="text" placeholder="Your Name *" required/>
                                 <!-- <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div> -->
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input name="Email" class="form-control" id="email" type="email" placeholder="Your Email *" required/>
+                                <input name="data[Email]" class="form-control" id="email" type="email" placeholder="Your Email *" required/>
                                 <!-- <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div> -->
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input name="Phone" class="form-control" id="phone" type="tel" placeholder="Your Phone *" required/>
+                                <input name="data[Phone]" class="form-control" id="phone" type="tel" placeholder="Your Phone *" required/>
                                 <!-- <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div> -->
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea name="Message" class="form-control" id="message" placeholder="Your Message *" required></textarea>
+                                <textarea name="data[Message]" class="form-control" id="message" placeholder="Your Message *" required></textarea>
                                 <!-- <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div> -->
                             </div>
                         </div>
@@ -609,5 +609,20 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            var form = document.getElementById('contactForm');
+            form.addEventListener("submit", e => {
+              e.preventDefault();
+              fetch(form.action, {
+                  method : "POST",
+                  body: new FormData(document.getElementById("contactForm")),
+              }).then(
+                  response => response.json()
+              ).then((html) => {
+                // you can put any JS code here
+                alert('success')
+              });
+            });
+          </script>
     </body>
 </html>
