@@ -30,7 +30,6 @@ const db = getDatabase();
 function insertData(data) {
     set(ref(db, 'Events/' + data.id), {
         title: data.title,
-        description: data.description,
         image: data.image,
         iframe: data.iframe,
     })
@@ -59,14 +58,10 @@ async function renderPortfolio() {
     let portfolioHeading_1 = document.getElementById(
         'portfolio-caption-heading-1'
     );
-    let portfolioSubheading_1 = document.getElementById(
-        'portfolio-caption-subheading-1'
-    );
     let portfolioImage_1 = document.getElementById('portfolio-image-1');
     let portfolioIframe_1 = document.getElementById('portfolio-iframe-1');
 
     portfolioHeading_1.innerHTML = events[1].title;
-    portfolioSubheading_1.innerHTML = events[1].description;
     portfolioImage_1.src = events[1].image;
     portfolioIframe_1.innerHTML = events[1].iframe;
 
@@ -74,14 +69,10 @@ async function renderPortfolio() {
     let portfolioHeading_2 = document.getElementById(
         'portfolio-caption-heading-2'
     );
-    let portfolioSubheading_2 = document.getElementById(
-        'portfolio-caption-subheading-2'
-    );
     let portfolioImage_2 = document.getElementById('portfolio-image-2');
     let portfolioIframe_2 = document.getElementById('portfolio-iframe-2');
 
     portfolioHeading_2.innerHTML = events[2].title;
-    portfolioSubheading_2.innerHTML = events[2].description;
     portfolioImage_2.src = events[2].image;
     portfolioIframe_2.innerHTML = events[2].iframe;
 
@@ -89,22 +80,50 @@ async function renderPortfolio() {
     let portfolioHeading_3 = document.getElementById(
         'portfolio-caption-heading-3'
     );
-    let portfolioSubheading_3 = document.getElementById(
-        'portfolio-caption-subheading-3'
-    );
     let portfolioImage_3 = document.getElementById('portfolio-image-3');
     let portfolioIframe_3 = document.getElementById('portfolio-iframe-3');
 
     portfolioHeading_3.innerHTML = events[3].title;
-    portfolioSubheading_3.innerHTML = events[3].description;
     portfolioImage_3.src = events[3].image;
     portfolioIframe_3.innerHTML = events[3].iframe;
+
+    // Event 4
+    let portfolioHeading_4 = document.getElementById(
+        'portfolio-caption-heading-4'
+    );
+    let portfolioImage_4 = document.getElementById('portfolio-image-4');
+    let portfolioIframe_4 = document.getElementById('portfolio-iframe-4');
+
+    portfolioHeading_4.innerHTML = events[4].title;
+    portfolioImage_4.src = events[4].image;
+    portfolioIframe_4.innerHTML = events[4].iframe;
+
+    // Event 5
+    let portfolioHeading_5 = document.getElementById(
+        'portfolio-caption-heading-5'
+    );
+    let portfolioImage_5 = document.getElementById('portfolio-image-5');
+    let portfolioIframe_5 = document.getElementById('portfolio-iframe-5');
+
+    portfolioHeading_5.innerHTML = events[5].title;
+    portfolioImage_5.src = events[5].image;
+    portfolioIframe_5.innerHTML = events[5].iframe;
+
+    // Event 6
+    let portfolioHeading_6 = document.getElementById(
+        'portfolio-caption-heading-6'
+    );
+    let portfolioImage_6 = document.getElementById('portfolio-image-6');
+    let portfolioIframe_6 = document.getElementById('portfolio-iframe-6');
+
+    portfolioHeading_6.innerHTML = events[6].title;
+    portfolioImage_6.src = events[6].image;
+    portfolioIframe_6.innerHTML = events[6].iframe;
 }
 
 function updateData(data) {
     update(ref(db, 'Events/' + data.id), {
         title: data.title,
-        description: data.description,
         image: data.image,
         iframe: data.iframe,
     })
