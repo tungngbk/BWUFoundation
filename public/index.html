@@ -1,89 +1,577 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.8.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.8.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Be With You Foundation</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/nav-bar_logo.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body id="page-top">
+    <div id="fb-root"></div>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/nav-bar_logo.png" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#missions">Sứ mệnh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Sự kiện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Thành viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-heading text-uppercase">BE WITH YOU</div>
+            <div class="masthead-heading text-uppercase">FOUNDATION</div>
+
+            <a class="btn btn-primary btn-xl text-uppercase" href="#missions">Tell Me More</a>
+        </div>
+    </header>
+    <!-- missions-->
+    <section class="page-section" id="missions">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Sứ mệnh</h2>
+            </div>
+            <div class="row mt-5 text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Học Bổng</h4>
+                    <p class="text-muted">
+                        BWU mong muốn sẽ góp một phần nhỏ giúp đỡ các em học
+                        sinh cấp ba, để các em có cơ hội thực hiện và viết
+                        tiếp ước mơ của mình.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Chia Sẻ</h4>
+                    <p class="text-muted">
+                        BWU cũng sẽ là một fanpage cập nhật, chia sẻ những
+                        thông tin bổ ích và thú vị về học sinh, sinh viên.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-seedling fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Phát triển</h4>
+                    <p class="text-muted">
+                        BWU còn đề ra mục tiêu là phát triển mỗi thành viên
+                        trong tổ chức. Mỗi cá nhân có thể vừa trải nghiệm,
+                        vừa cống hiến sức trẻ của mình.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Sự kiện</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item shadow-lg">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img id="portfolio-image-1" class="img-fluid" src="#" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="portfolio-caption-heading-1" class="portfolio-caption-heading">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item shadow-lg">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img id="portfolio-image-2" class="img-fluid" src="#" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="portfolio-caption-heading-2" class="portfolio-caption-heading">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item shadow-lg">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img id="portfolio-image-3" class="img-fluid" src="#" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="portfolio-caption-heading-3" class="portfolio-caption-heading">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item shadow-lg">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img id="portfolio-image-4" class="img-fluid" src="#" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="portfolio-caption-heading-4" class="portfolio-caption-heading">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item shadow-lg">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img id="portfolio-image-5" class="img-fluid" src="#" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="portfolio-caption-heading-5" class="portfolio-caption-heading">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item shadow-lg">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img id="portfolio-image-6" class="img-fluid" src="#" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="portfolio-caption-heading-6" class="portfolio-caption-heading">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Giới thiệu</h2>
+                <h3 class="section-subheading text-muted">
+                    Lorem ipsum dolor sit amet consectetur.
+                </h3>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." />
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2009-2011</h4>
+                            <h4 class="subheading">
+                                Our Humble Beginnings
+                            </h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sunt ut voluptatum eius
+                                sapiente, totam reiciendis temporibus qui
+                                quibusdam, recusandae sit vero unde, sed,
+                                incidunt et ea quo dolore laudantium
+                                consectetur!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." />
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>March 2011</h4>
+                            <h4 class="subheading">An Agency is Born</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sunt ut voluptatum eius
+                                sapiente, totam reiciendis temporibus qui
+                                quibusdam, recusandae sit vero unde, sed,
+                                incidunt et ea quo dolore laudantium
+                                consectetur!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." />
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>December 2015</h4>
+                            <h4 class="subheading">
+                                Transition to Full Service
+                            </h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sunt ut voluptatum eius
+                                sapiente, totam reiciendis temporibus qui
+                                quibusdam, recusandae sit vero unde, sed,
+                                incidunt et ea quo dolore laudantium
+                                consectetur!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." />
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>July 2020</h4>
+                            <h4 class="subheading">Phase Two Expansion</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sunt ut voluptatum eius
+                                sapiente, totam reiciendis temporibus qui
+                                quibusdam, recusandae sit vero unde, sed,
+                                incidunt et ea quo dolore laudantium
+                                consectetur!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>
+                            Be Part
+                            <br />
+                            Of Our
+                            <br />
+                            Story!
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Team-->
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Thành viên</h2>
+                <h3 class="section-subheading text-muted">
+                    Đây là một số thành viên nổi bật của chúng tôi.
+                </h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <a href="https://www.facebook.com/kimngunw" target="_blank"><img class="mx-auto rounded-circle"
+                                src="assets/img/team/Ngân.jpg" alt="..." /></a>
+                        <h4>Kim Ngân</h4>
+                        <p class="text-muted">Head of Communications</p>
+                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <a href="https://www.facebook.com/vanthinh.to.9" target="_blank"><img
+                                class="mx-auto rounded-circle" src="assets/img/team/Thịnh.jpg" alt="..." /></a>
+                        <h4>Văn Thịnh</h4>
+                        <p class="text-muted">Founder</p>
+                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <a href="https://www.facebook.com/luubich.tran.1" target="_blank"><img
+                                class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." /></a>
+                        <h4>Lưu Bích</h4>
+                        <p class="text-muted">Head of Content</p>
+                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                </div> -->
+        </div>
+    </section>
+    <!-- Clients-->
+    <div class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg"
+                            alt="..." aria-label="Microsoft Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg"
+                            alt="..." aria-label="Google Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg"
+                            alt="..." aria-label="Facebook Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg"
+                            alt="..." aria-label="IBM Logo" /></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Liên hệ</h2>
+                <h3 class="section-subheading text-muted">
+                    Lorem ipsum dolor sit amet consectetur.
+                </h3>
+            </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            <form id="contactForm" action="https://sheetdb.io/api/v1/0ojd3kbmckxqo" method="POST">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!-- Name input-->
+                            <input name="data[Name]" class="form-control" id="name" type="text"
+                                placeholder="Your Name *" required />
+                            <!-- <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div> -->
+                        </div>
+                        <div class="form-group">
+                            <!-- Email address input-->
+                            <input name="data[Email]" class="form-control" id="email" type="email"
+                                placeholder="Your Email *" required />
+                            <!-- <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div> -->
+                        </div>
+                        <div class="form-group mb-md-0">
+                            <!-- Phone number input-->
+                            <input name="data[Phone]" class="form-control" id="phone" type="tel"
+                                placeholder="Your Phone *" required />
+                            <!-- <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-group-textarea mb-md-0">
+                            <!-- Message input-->
+                            <textarea name="data[Message]" class="form-control" id="message"
+                                placeholder="Your Message *" required></textarea>
+                            <!-- <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit success message-->
+                <!---->
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <!-- <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div> -->
+                <!-- Submit error message-->
+                <!---->
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
+                <!-- Submit Button-->
+                <div class="text-center">
+                    <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">
+                        Gửi thông điệp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">
+                    Copyright &copy; Be With You Foundation 2022
+                </div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/BWUFoundation"
+                        aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2"
+                        href="https://www.youtube.com/channel/UCICWaOZYie2yYKHqX3MY-TA" aria-label="Youtube"
+                        target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="mailto:bewithyoufoundation@gmail.com"
+                        aria-label="Email"><i class="fa fa-envelope"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="portfolio-iframe-1"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="portfolio-iframe-2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 3 modal popup-->
+    <div class="modal fade" id="portfolioModal3" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="portfolio-iframe-3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 4 modal popup-->
+    <div class="modal fade" id="portfolioModal4" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="portfolio-iframe-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 5 modal popup-->
+    <div class="modal fade" id="portfolioModal5" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="portfolio-iframe-5"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 6 modal popup-->
+    <div class="modal fade" id="portfolioModal6" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="portfolio-iframe-6"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+    <!-- Fire base -->
+    <script type="module">
+        import { renderPortfolio } from './js/crud.js';
+        renderPortfolio();
     </script>
-  </body>
+
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script>
+        var form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(document.getElementById('contactForm')),
+            })
+                .then((response) => response.json())
+                .then((html) => {
+                    // you can put any JS code here
+                    alert('success');
+                });
+        });
+    </script>
+</body>
+
 </html>
