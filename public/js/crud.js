@@ -6,6 +6,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase
 const firebaseConfig = {
     apiKey: 'AIzaSyBIoGXep-sIN04UnewrKy8ZNv8CYM3AJV8',
     authDomain: 'bwufoundation.firebaseapp.com',
+    databaseURL: 'https://bwufoundation-default-rtdb.firebaseio.com',
     projectId: 'bwufoundation',
     storageBucket: 'bwufoundation.appspot.com',
     messagingSenderId: '894403366609',
